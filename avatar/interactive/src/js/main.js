@@ -12,7 +12,7 @@ var system_prompt = `You are an AI assistant focused on delivering brief product
 - Pay attention to the language the customer is using in their latest statement and respond in the same language!
 `
 
-const TTSVoice = "en-US-JennyMultilingualNeural" // Update this value if you want to use a different voice
+const TTSVoice = "nl-NL-FennaNeural" // Update this value if you want to use a different voice
 
 const CogSvcRegion = "westeurope" // Fill your Azure cognitive services region here, e.g. westus2
 
@@ -208,7 +208,7 @@ window.startSession = () => {
 }
 
 async function greeting() {
-  addToConversationHistory("Hello, my name is Lisa. How can I help you?", "light")
+  addToConversationHistory("Hallo, mijn naam is Sanne. Hoe kan ik je helpen?", "light")
 
   let spokenText = "<speak version='1.0' xmlns='http://www.w3.org/2001/10/synthesis' xmlns:mstts='https://www.w3.org/2001/mstts' xml:lang='en-US'><voice xml:lang='en-US' xml:gender='Female' name='en-US-JennyNeural'>Hello, my name is Lisa. How can I help you?</voice></speak>"
   avatarSynthesizer.speakSsmlAsync(spokenText, (result) => {
